@@ -14,7 +14,6 @@ given area. This is directly correlated to the amount of pollution that those ar
 contribute to the watershed – as such, we were able to determine which areas of the
 watershed would be most likely to feel the effects of runoff-based pollution.
 
-
 ## Data
 
 This project used two datasets. One, a 30 meter digital elevation model, was
@@ -29,7 +28,6 @@ source. However, given the size of the data, we did have to alter the scale of t
 when analyzing trends across the 1985-2023 land cover data. To solve this problem, we
 mostly used a Jupyter Notebook in Arc to have more control over the environment.
 
-
 ## Methods
 
 The first step in this analysis was to create a slope raster; this is important to
@@ -40,7 +38,7 @@ Given that we had about 12.5 GB in land cover data, we decided to load in each
 year’s land cover raster individually with a goal of calculating the runoff potential, zonal
 statistics, and summarizing the year as best as possible, then move on to the next year.
 
-#### Steps for Calculating Runoff Potential
+### Calculating Runoff Potential
 
 First we loaded in
 the packages, only using
@@ -50,7 +48,7 @@ function used to calculate
 runoff potential. After
 running this function, we were left with a raster, runoff potential, and zonal statistics summary tables for that year.
 
-#### Steps for Land Cover analysis
+### Land Cover analysis
 
 We would use multiple methods to examine land cover trends more specifically.
 We used a change detection method where we reclassified 1985 and 2023 into two
