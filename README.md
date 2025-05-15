@@ -14,15 +14,15 @@ This EDA serves in aiding in the understanding of spatial and temporal changes i
 
 This project used two primary datasets:
 
-1. Digital Elevation Model (DEM), 30-meter resolution DEM obtained from Google Earth Engine.
+1. Digital Surface Model (DSM), 30-meter resolution DSM obtained from Google Earth Engine.
 
 2. Land Cover Data, A series of 30-meter resolution rasters from the National Land Cover Database (NLCD) for each year from 1985 to 2023.
 
-In total, this analysis worked with 39 raster datasets, one DEM and 38 annual land cover rasters, each clipped to the extent of the Chesapeake Bay Watershed, amounting to about 13 GB of spatial data.
+In total, this analysis worked with 39 raster datasets, one DSM and 38 annual land cover rasters, each clipped to the extent of the Chesapeake Bay Watershed, amounting to about 13 GB of spatial data.
 
 ## Methods
 
-Given that both datasets were pre-clipped by the data providers, not much additional preprocessing was required prior to the analysis. However, generating a slope raster, which is critical for calculating runoff potential across the watershed, was needed. This was done using the Slope tool in ArcGIS Pro with the DEM as the input.
+Given that both datasets were pre-clipped by the data providers, not much additional preprocessing was required prior to the analysis. However, generating a slope raster, which is critical for calculating runoff potential across the watershed, was needed. This was done using the Slope tool in ArcGIS Pro with the DSM as the input.
 
 Working with approximately 13 GB of raster data can pose as a challenge for full-resolution, time-series analysis. To combat this challenge the majority of the workflow was conducted in a Jupyter Notebook using the `arcpy` and some other libraries. This was more efficient than manullily performing the analysis with ArcGIS, scripting in a Jupyter Notebook and utilizing `arcpy` also gave more control and customization over the workflow of the analysis.
 
@@ -164,3 +164,11 @@ Virginia, www.vdot.virginia.gov/media/vdotvirginiagov/doing-business/technical-g
 Modelling Hydrologic Regime of Lakshmanatirtha Watershed, Cauvery River | IEEE Conference Publication | IEEE Xplore, ieeexplore.ieee.org/document/6967560/. Accessed 20 Apr. 2025.
 
 Runoff Coefficients | Download Table, www.researchgate.net/figure/RUNOFF-COEFFICIENTS_tbl3_266319187. Accessed 17 Apr. 2025.
+
+
+## Data Sources
+
+DSM - https://developers.google.com/earth-engine/datasets/catalog/JAXA_ALOS_AW3D30_V3_2#description
+
+NLCD - https://www.mrlc.gov/viewer/
+
